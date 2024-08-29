@@ -103,18 +103,18 @@ else()
   list(APPEND _install_libs flashlight-text-kenlm)
 endif()
 
-# Install headers
-install(
-  DIRECTORY ${PROJECT_SOURCE_DIR}/flashlight/lib
-  COMPONENT headers
-  DESTINATION ${FL_INSTALL_INC_DIR}/flashlight
-  FILES_MATCHING # preserve directory structure
-  PATTERN  "*.h"
-  PATTERN  "*.hpp"
-  PATTERN "test*" EXCLUDE
-  PATTERN ".git" EXCLUDE
-  PATTERN "${_excluded_headers}" EXCLUDE
-)
+# # Install headers
+# install(
+#   DIRECTORY ${PROJECT_SOURCE_DIR}/flashlight/lib
+#   COMPONENT headers
+#   DESTINATION ${FL_INSTALL_INC_DIR}/flashlight
+#   FILES_MATCHING # preserve directory structure
+#   PATTERN  "*.h"
+#   PATTERN  "*.hpp"
+#   PATTERN "test*" EXCLUDE
+#   PATTERN ".git" EXCLUDE
+#   PATTERN "${_excluded_headers}" EXCLUDE
+# )
 
-# Install libraries and create CMake config/targets files
-fl_text_setup_install_targets(INSTALL_TARGETS ${_install_libs})
+# # Install libraries and create CMake config/targets files
+# fl_text_setup_install_targets(INSTALL_TARGETS ${_install_libs})
